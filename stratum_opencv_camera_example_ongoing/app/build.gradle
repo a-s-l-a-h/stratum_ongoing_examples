@@ -1,0 +1,61 @@
+plugins {
+    alias(libs.plugins.android.application)
+    id 'com.chaquo.python'
+}
+
+android {
+    namespace 'com.example.example_camera_opencv'
+    compileSdk {
+        version = release(36)
+    }
+
+    defaultConfig {
+        applicationId "com.example.example_camera_opencv"
+        minSdk 24
+        targetSdk 36
+        versionCode 1
+        versionName "1.0"
+        ndk {
+            // Only ABIs you built stratum wheels for
+            abiFilters "arm64-v8a"
+        }
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+chaquopy {
+    defaultConfig {
+        version = "3.10"
+        buildPython("C:/Python310/python.exe")
+
+        pip {
+            // Put your .whl file in app/libs/ folder
+            // File: stratum-0.1.0-cp312-cp312-android_33_arm64_v8a.whl
+            options("--find-links", "${project.projectDir}/libs")
+            install("stratum==0.1.0")
+            install("numpy")
+            install("opencv-python")
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
