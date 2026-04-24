@@ -1,0 +1,132 @@
+{
+  "android_version": "35",
+  "mode": "full",
+  "targets": [
+    {
+      "fqn": "android.app.Activity",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip all below due to  above choose full mode , now full extraction "
+    },
+    {
+      "fqn": "android.view.View",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.view.ViewGroup",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.Button",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.TextView",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.EditText",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.ImageView",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.LinearLayout",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.FrameLayout",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.widget.RecyclerView",
+      "enabled": false,
+      "priority": 2,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.content.Context",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.content.Intent",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.os.Bundle",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.os.Handler",
+      "enabled": true,
+      "priority": 2,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.hardware.SensorManager",
+      "enabled": true,
+      "priority": 2,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.hardware.camera2.CameraManager",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip above choosen full . it's only for some extraction"
+    },
+    {
+      "fqn": "android.hardware.camera2.CameraDevice",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip above choosen full, this json for extraction "
+    },
+    {
+      "fqn": "android.media.AudioRecord",
+      "enabled": true,
+      "priority": 2,
+      "notes": "skip"
+    },
+    {
+      "fqn": "android.graphics.Bitmap",
+      "enabled": true,
+      "priority": 1,
+      "notes": "skip due to above choose full"
+    },
+    {
+      "fqn": "android.location.LocationManager",
+      "enabled": true,
+      "priority": 2,
+      "notes": "skip due to above choose full "
+    },
+    {
+      "fqn": "android.widget.DatePicker",
+      "enabled": false,
+      "priority": 3,
+      "notes": "skip for now"
+    }
+  ]
+}
